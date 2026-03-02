@@ -1,0 +1,265 @@
+# ========================================
+# WiFi Scout v2.2.9 - Git Ignore File
+# ========================================
+# Security-focused exclusions for production deployment
+# Last Updated: 2026-03-02
+
+# ========================================
+# Python Environment
+# ========================================
+venv/
+env/
+ENV/
+.venv/
+*.virtualenv
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# ========================================
+# IDE and Editor Files
+# ========================================
+# VSCode / Cursor
+.vscode/
+.cursor/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw[a-z]
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ========================================
+# Operating System Files
+# ========================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+
+# ========================================
+# Application Data & Logs
+# ========================================
+# Log files
+*.log
+logs/
+*.log.*
+cli.log
+
+# User data directories
+.network_suite/
+~/.network_suite/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# ========================================
+# Security & Credentials
+# ========================================
+# Never commit sensitive data
+*.key
+*.pem
+*.p12
+*.pfx
+*.cert
+*.crt
+secrets/
+credentials/
+.env
+.env.local
+.env.*.local
+config.local.*
+
+# API keys and tokens
+*_secret*
+*_token*
+*_password*
+api_keys.txt
+
+# Database files (if any)
+*.db
+*.sqlite
+*.sqlite3
+
+# ========================================
+# Testing & Coverage
+# ========================================
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+.pytype/
+nosetests.xml
+coverage.xml
+*.cover
+.cache
+
+# ========================================
+# Documentation Build Files
+# ========================================
+docs/_build/
+docs/_static/
+docs/_templates/
+site/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# ========================================
+# Version Control
+# ========================================
+.git/
+.gitattributes
+*.orig
+*.rej
+
+# ========================================
+# Miscellaneous
+# ========================================
+# Compressed files (build artifacts)
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.7z
+
+# Package manager files (keep requirements.txt)
+Pipfile.lock
+poetry.lock
+
+# Profiling data
+*.prof
+*.lprof
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pyenv
+.python-version
+
+# ========================================
+# Project-Specific Exclusions
+# ========================================
+# Keep these files/folders OUT of version control
+
+# Old test files (if recreated)
+test_*.pyc
+*_test.pyc
+
+# Temporary scan results
+scan_results/
+network_logs/
+
+# User-generated configuration backups
+*_backup.json
+*_backup.yaml
+*_backup.yml
+
+# Development/debug outputs
+debug/
+debug_*.txt
+
+# ========================================
+# INCLUDE These Important Files
+# ========================================
+# Use negation pattern (!) to force-include if accidentally excluded
+
+# Core application files
+!network_suite.py
+!requirements.txt
+!README.md
+!GETTING_STARTED.md
+!VERSION_2.2.9_RELEASE.md
+
+# Installation scripts
+!install.bat
+!install.sh
+!run_wifi_scout.bat
+!run_wifi_scout.sh
+
+# Core and mods directories
+!core/
+!core/*.py
+!mods/
+!mods/*.py
+
+# Documentation
+!docs/
+!docs/*.md
+
+# Archive (legacy code reference)
+!archive/
+!archive/*.py
+
+# ========================================
+# End of .gitignore
+# ========================================

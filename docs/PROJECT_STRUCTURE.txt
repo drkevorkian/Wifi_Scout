@@ -1,0 +1,34 @@
+Wi-Fi Scout Pro v2.3 - Project Structure
+==========================================
+
+wifi_scout/
+│
+├── 📱 APPLICATION FILES
+│   ├── wa.py                    (2,127 lines - Main application)
+│   ├── test_security.py         (Security test suite)
+│   └── test_wa.py               (Functional tests)
+│
+├── 📋 CONFIGURATION
+│   └── requirements.txt         (Python dependencies)
+│
+├── 📖 CORE DOCUMENTATION
+│   ├── README.md                (Comprehensive guide - START HERE)
+│   ├── CHANGELOG.md             (Version history)
+│   ├── SECURITY_REFERENCE.md    (Security quick reference)
+│   └── CLEANUP_SUMMARY.md       (This cleanup report)
+│
+├── 🚀 INSTALLERS & LAUNCHERS
+│   ├── install.bat              (Windows installer)
+│   ├── install.sh               (Linux/macOS installer)
+│   ├── run_wifi_scout.bat       (Windows launcher)
+│   └── run_wifi_scout.sh        (Linux/macOS launcher)
+│
+├── 📚 docs/ (Detailed Documentation)
+│   ├── QUICKSTART.md            (Detailed usage guide)
+│   ├── QUICK_REFERENCE.md       (Command reference)
+│   ├── SECURITY_FIXES.md        (Technical security details)
+│   └── SECURITY_AUDIT_REPORT.md (Security audit summary)
+│
+└── 🔧 venv/ (Virtual environment - created by installer)
+
+Total: 12 root files + 4 doc files = 16 files (clean & organized!)
