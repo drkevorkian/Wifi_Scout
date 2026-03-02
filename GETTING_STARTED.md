@@ -1,4 +1,4 @@
-# Network Suite v3.0 - Installation & Usage
+# Network Suite v2.2.9 - Installation & Usage
 
 ## 🚀 Quick Start
 
@@ -391,7 +391,7 @@ cat ~/.network_suite/network_suite_*.log
 
 ---
 
-## 🎉 What's New in v3.0
+## 🎉 What's New in v2.2.9
 
 **Complete rewrite with modular architecture:**
 
@@ -405,7 +405,7 @@ cat ~/.network_suite/network_suite_*.log
 ✅ Settings persistence  
 ✅ Comprehensive documentation
 
-**vs v2.3 (wa.py):**
+**vs v2.0 (wa.py - legacy):**
 - 3x code size
 - 9x more tools
 - Modular vs monolithic

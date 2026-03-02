@@ -23,11 +23,13 @@
 - 🌐 **DNS Lookup** - Query A, AAAA, CNAME, MX, TXT, NS records with latency
 - 📡 **Ping Tool** - ICMP echo test with statistics (min/max/avg, packet loss)
 - 🛣️ **Traceroute** - Network route tracing with hop-by-hop details
-- 🌍 **HTTP Checker** - HTTP/HTTPS testing with timing breakdown and certificates
+- 🌍 **HTTP Checker** - HTTP/HTTPS testing with timing breakdown* and certificates
 - 💻 **Network Interfaces** - View all interfaces with IP/MAC/MTU/status
 - 🔗 **ARP Table** - Display ARP cache with IP-to-MAC mappings
 - 🗺️ **Routing Table** - View system routing table with metrics
 - 🔍 **LAN Scanner** - Safe local network discovery (RFC1918 only)
+
+*Note: HTTP timing breakdown is approximate - see [Known Limitations](#-known-limitations)
 
 ### Advanced WiFi Features
 - ⚡ **Auto-Refresh** - Continuous network monitoring with configurable intervals
@@ -206,7 +208,7 @@ Expected output:
 ### Run Functional Tests
 ```bash
 # Note: Functional tests are for the legacy wa.py (archived)
-# Network Suite v3.0+ testing is integrated into the application
+# Network Suite v2.2.9+ testing is integrated into the application
 python -m pytest  # If pytest is installed
 ```
 
@@ -321,6 +323,20 @@ wifi_scout/
 
 ---
 
+## ⚠️ Known Limitations
+
+### HTTP Timing Methodology
+The HTTP Checker tool's timing breakdown (DNS/connect/TLS) is measured on a preliminary connection that is then closed. The actual HTTP request is performed via a separate connection.
+
+**What this means**:
+- Timing values are **approximations**, not exact measurements
+- Useful for identifying slow DNS, TLS handshake issues, and relative performance
+- For precise end-to-end timing, use external tools like `curl --write-out` or dedicated HTTP benchmarking tools
+
+**Why**: This approach allows the tool to measure individual phases while still handling the full HTTP request/response cycle properly.
+
+---
+
 ## 🤝 Contributing
 
 ### Code Guidelines
@@ -387,7 +403,7 @@ For security concerns:
 
 ## 📊 Project Stats
 
-- **Version**: 2.3
+- **Version**: 2.2.9
 - **Release Date**: 2026-03-02
 - **Lines of Code**: ~2,100
 - **Test Coverage**: Security tests (100%), Functional tests (80%)

@@ -1,6 +1,6 @@
 # 📁 Network Suite - Directory Structure
 
-**Version**: 3.0.2  
+**Version**: 2.2.9  
 **Last Updated**: 2026-03-02
 
 ---

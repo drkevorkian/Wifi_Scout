@@ -1,7 +1,7 @@
 # 🔧 Installation & Launcher Scripts - Updated
 
 **Date**: 2026-03-02  
-**Version**: 3.0.2  
+**Version**: 2.2.9  
 **Status**: ✅ FIXED
 
 ---
