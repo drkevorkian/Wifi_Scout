@@ -45,6 +45,21 @@
 
 ### Installation
 
+**Recommended: Modern Install with pip**
+```bash
+# Install with all features (recommended)
+pip install -e ".[full]"
+
+# Or install minimal (CLI only, no GUI)
+pip install -e .
+
+# Or install specific feature sets
+pip install -e ".[gui]"      # GUI support only
+pip install -e ".[network]"  # Enhanced network tools only
+```
+
+**Legacy: Manual Install**
+
 #### Windows
 ```batch
 # Run the installer (creates venv, installs dependencies)
@@ -69,6 +84,20 @@ pip install -r requirements.txt
 ```
 
 ### Running the Application
+
+**Using Console Commands (After pip install)**
+```bash
+# Main command
+network-scout              # Launch GUI
+network-scout --help       # Show CLI help
+network-scout wifi scan    # Scan WiFi networks
+
+# Alternative commands
+wifi-scout --version       # Same as network-scout
+ns wifi best              # Short alias
+```
+
+**Using Python directly**
 
 #### Windows
 ```batch
@@ -188,48 +217,67 @@ For detailed security information, see:
 
 ## 🧪 Testing
 
-### Run Security Tests
+### Run Test Suite
 ```bash
-python test_security.py
+# Install with dev dependencies
+pip install -e ".[dev]"
+
+# Run all tests
+pytest tests/ -v
+
+# Run with coverage
+pytest tests/ --cov=. --cov-report=html
+
+# Run specific test file
+pytest tests/test_plugin_loader.py -v
 ```
 
-Expected output:
-```
-✅ ALL SECURITY TESTS PASSED!
-
-🛡️  Security fixes verified:
-  ✅ Input validation working
-  ✅ XML injection prevented
-  ✅ HTML XSS prevented
-  ✅ Log injection prevented
-  ✅ Secure file deletion working
-```
-
-### Run Functional Tests
-```bash
-# Note: Functional tests are for the legacy wa.py (archived)
-# Network Suite v2.2.9+ testing is integrated into the application
-python -m pytest  # If pytest is installed
-```
+### Test Categories
+- **test_plugin_loader.py** - Plugin architecture tests
+- **test_cli.py** - Command-line interface tests  
+- **test_wifi_engine.py** - Core WiFi functionality tests
+- **test_integration.py** - End-to-end integration tests
 
 ---
 
 ## 📁 Project Structure
 
 ```
-wifi_scout/
+Wifi_Scout/
 ├── network_suite.py            # Main application
-├── requirements.txt            # Python dependencies
+├── pyproject.toml              # Modern Python packaging config
+├── requirements.txt            # Legacy dependency list
 ├── README.md                   # This file
+├── GETTING_STARTED.md          # Detailed installation guide
 ├── CHANGELOG.md                # Version history
 ├── SECURITY_REFERENCE.md       # Security quick reference
-├── install.bat/sh              # Installation scripts
-├── run_wifi_scout.bat/sh       # Launch scripts
+├── install.bat/sh              # Legacy installation scripts
+├── run_wifi_scout.bat/sh       # Legacy launch scripts
+├── .github/
+│   └── workflows/
+│       └── ci.yml              # GitHub Actions CI/CD
+├── tests/                      # Test suite
+│   ├── test_plugin_loader.py  # Plugin system tests
+│   ├── test_cli.py             # CLI tests
+│   ├── test_wifi_engine.py    # Core functionality tests
+│   └── test_integration.py    # Integration tests
+├── core/                       # Core modules
+│   ├── wifi_engine.py          # WiFi scanning & connection
+│   └── utilities.py            # Shared utilities
+├── mods/                       # Diagnostic tool plugins
+│   ├── dns_tool.py
+│   ├── ping_tool.py
+│   ├── traceroute_tool.py
+│   ├── http_tool.py
+│   ├── interfaces_tool.py
+│   ├── arp_tool.py
+│   ├── route_tool.py
+│   └── lan_scan_tool.py
 ├── docs/                       # Documentation
-│   ├── QUICKSTART.md           # Detailed usage guide
-│   ├── QUICK_REFERENCE.md      # Command reference
-│   ├── SECURITY_FIXES.md       # Technical security details
-│   └── SECURITY_AUDIT_REPORT.md # Security audit summary
+│   ├── QUICKSTART.md
+│   ├── QUICK_REFERENCE.md
+│   ├── SECURITY_FIXES.md
+│   └── SECURITY_AUDIT_REPORT.md
 └── venv/                       # Virtual environment (created by installer)
 ```
 
@@ -405,13 +453,29 @@ For security concerns:
 
 - **Version**: 2.2.9
 - **Release Date**: 2026-03-02
-- **Lines of Code**: ~2,100
-- **Test Coverage**: Security tests (100%), Functional tests (80%)
+- **Lines of Code**: ~6,800
+- **Test Coverage**: Core modules with unit tests
 - **Platforms**: Windows, Linux, macOS
 - **Security Audits**: 1 (all issues resolved)
+- **CI/CD**: GitHub Actions (Win/Linux/macOS matrix)
+- **Package Format**: Modern pyproject.toml with extras
+
+---
+
+## 🔄 CI/CD Status
+
+![CI Status](https://github.com/yourusername/Wifi_Scout/actions/workflows/ci.yml/badge.svg)
+
+Automated testing on every push:
+- ✅ Lint checks (flake8, black)
+- ✅ Unit tests on Python 3.10, 3.11, 3.12
+- ✅ Platform tests on Windows, Linux, macOS
+- ✅ Security scans (bandit, safety)
+- ✅ Build and distribution tests
+- ✅ Installation verification
 
 ---
 
 **Made with ❤️ and a focus on security**
 
-*Last Updated: 2026-03-02*
+*Last Updated: 2026-03-02 - Network Scout v2.2.9*

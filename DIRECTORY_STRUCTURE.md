@@ -1,4 +1,4 @@
-# 📁 Network Suite - Directory Structure
+# 📁 Network Scout - Directory Structure
 
 **Version**: 2.2.9  
 **Last Updated**: 2026-03-02
@@ -8,11 +8,12 @@
 ## 📂 Root Directory Structure
 
 ```
-wifi_scout/
+Wifi_Scout/
 ├── 📄 network_suite.py          # Main application (GUI + CLI)
+├── 📄 pyproject.toml            # Modern Python packaging
 ├── 📄 README.md                 # Main documentation
 ├── 📄 GETTING_STARTED.md        # Installation & usage guide
-├── 📄 requirements.txt          # Python dependencies
+├── 📄 requirements.txt          # Legacy dependency file (use pyproject.toml)
 │
 ├── 🔧 install.bat              # Windows installer
 ├── 🔧 install.sh               # Linux/macOS installer
@@ -208,10 +209,8 @@ Original files kept for reference:
 
 | Version | Date | Description |
 |---------|------|-------------|
-| 3.0.2 | 2026-03-02 | Critical crash fix (thread GC) |
-| 3.0.1 | 2026-03-01 | Security fixes |
-| 3.0.0 | 2026-03-01 | Modular architecture |
-| 2.3 | Earlier | WiFi Scout Pro (monolithic) |
+| 2.2.9 | 2026-03-02 | Production release - modular architecture, security hardened |
+| 2.0-2.2 | Earlier | Legacy WiFi Scout Pro (monolithic wa.py) |
 
 ---
 
@@ -239,4 +238,4 @@ Contains:
 
 **Clean, Organized, Production-Ready** ✅
 
-*Last Updated: 2026-03-02*
+*Last Updated: 2026-03-02 - Network Scout v2.2.9*

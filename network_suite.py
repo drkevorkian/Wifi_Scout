@@ -1211,5 +1211,10 @@ def main() -> int:
         return 1
 
 
+def cli_main() -> None:
+    """Console script entry point for setuptools."""
+    sys.exit(main())
+
+
 if __name__ == "__main__":
     sys.exit(main())

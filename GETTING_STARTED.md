@@ -1,16 +1,19 @@
-# Network Suite v2.2.9 - Installation & Usage
+# Network Scout v2.2.9 - Installation & Usage
 
 ## 🚀 Quick Start
 
 ### Installation
 ```bash
 # Clone or download this repository
-cd wifi_scout
+cd Wifi_Scout
 
-# Install dependencies (recommended)
-pip install PyQt6 matplotlib dnspython psutil
+# Install with all features
+pip install -e ".[full]"
 
-# Or use the installer script
+# Or minimal install (GUI + core only)
+pip install -e .
+
+# Or use the legacy installer script
 ./install.sh      # Linux/macOS
 install.bat       # Windows
 ```
@@ -147,8 +150,12 @@ python network_suite.py lan-scanner 10.0.0.0/24 --confirm
 - **dnspython** - Better DNS resolution (falls back to system commands)
 - **psutil** - Better interface detection (falls back to system commands)
 
-### Install All Optional
+### Install All Optional (Full Feature Set)
 ```bash
+# Install with all optional dependencies
+pip install -e ".[full]"
+
+# Or install individually
 pip install PyQt6 matplotlib dnspython psutil
 ```
 
@@ -393,7 +400,7 @@ cat ~/.network_suite/network_suite_*.log
 
 ## 🎉 What's New in v2.2.9
 
-**Complete rewrite with modular architecture:**
+**Complete architectural rewrite with modular design:**
 
 ✅ Plugin system for easy extension  
 ✅ 8 new network diagnostic tools  
@@ -436,6 +443,6 @@ See LICENSE file for details.
 
 ---
 
-**Network Suite v3.0** - Professional network diagnostics made easy.
+**Network Scout v2.2.9** - Professional network diagnostics made easy.
 
 For more information, see `PROJECT_COMPLETE.md` and `TESTING_GUIDE.md`.
