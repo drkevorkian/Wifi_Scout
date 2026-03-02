@@ -185,8 +185,8 @@ get_macos_wifi_interface(logger: Logger) -> Optional[str]
 # 1. Run security tests
 python test_security.py
 
-# 2. Syntax validation
-python -m py_compile wa.py
+# 2. Syntax validation (for legacy code)
+python -m py_compile archive/wa.py
 
 # 3. Manual security checks
 # - Verify no temp files remain after crash

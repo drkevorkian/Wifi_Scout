@@ -49,8 +49,8 @@ docs/
 ## 📋 File Organization
 
 ### Essential Files (Root)
-- **Application**: `wa.py`
-- **Tests**: `test_security.py`, `test_wa.py`
+- **Application**: `network_suite.py`
+- **Tests**: Archive contains legacy tests
 - **Setup**: `install.bat/sh`, `run_wifi_scout.bat/sh`
 - **Configuration**: `requirements.txt`
 - **Documentation**: `README.md`, `CHANGELOG.md`, `SECURITY_REFERENCE.md`
@@ -75,10 +75,10 @@ docs/
 3. **Audit Report** → `docs/SECURITY_AUDIT_REPORT.md`
 
 ### For Developers
-1. **Main Code** → `wa.py`
+1. **Main Code** → `network_suite.py`
 2. **Version History** → `CHANGELOG.md`
-3. **Security Tests** → `test_security.py`
-4. **Functional Tests** → `test_wa.py`
+3. **Legacy Code** → `archive/wa.py`
+4. **Legacy Tests** → `archive/test_wa.py`, `archive/test_security.py`
 
 ---
 
@@ -139,8 +139,9 @@ run_wifi_scout.bat
 
 ### Running Tests
 ```bash
-python test_security.py    # Verify security fixes
-python test_wa.py          # Test functionality
+# Legacy tests are in archive/ folder
+# For current version, use integrated testing
+python network_suite.py --help  # View available commands
 ```
 
 ---

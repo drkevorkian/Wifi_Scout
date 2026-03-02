@@ -70,8 +70,8 @@
 
 ## 📁 Files Changed
 
-- `wa.py` - ~500 lines modified, 15 functions updated
-- `test_wa.py` - Updated for new features
+- `network_suite.py` - Main application (v3.0+)
+- `archive/wa.py` - Legacy version (v2.3)
 - `*.md` - 7 documentation files created/updated
 
 ## 🚀 Quick Start
@@ -80,8 +80,8 @@
 # Install dependencies
 pip install -r requirements.txt
 
-# Run application
-python wa.py
+# Run current application
+python network_suite.py
 
 # Or use installers
 install.bat      # Windows

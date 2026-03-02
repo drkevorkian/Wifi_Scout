@@ -75,7 +75,7 @@ run_wifi_scout.bat
 
 # Or manually:
 venv\Scripts\activate
-python wa.py
+python network_suite.py
 ```
 
 #### Linux / macOS
@@ -85,7 +85,7 @@ python wa.py
 
 # Or manually:
 source venv/bin/activate
-python wa.py
+python network_suite.py
 ```
 
 ---
@@ -205,7 +205,9 @@ Expected output:
 
 ### Run Functional Tests
 ```bash
-python test_wa.py
+# Note: Functional tests are for the legacy wa.py (archived)
+# Network Suite v3.0+ testing is integrated into the application
+python -m pytest  # If pytest is installed
 ```
 
 ---
@@ -214,9 +216,7 @@ python test_wa.py
 
 ```
 wifi_scout/
-├── wa.py                       # Main application
-├── test_security.py            # Security test suite
-├── test_wa.py                  # Functional tests
+├── network_suite.py            # Main application
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This file
 ├── CHANGELOG.md                # Version history

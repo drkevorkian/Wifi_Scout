@@ -18,10 +18,12 @@ Updated all references from "WiFi Analyzer" to "WiFi Scout" to reflect the perma
 1. **`.gitignore`**
    - Header: "WiFi Analyzer v2.2.9" → "WiFi Scout v2.2.9"
 
-### Documentation Files
+### Main Documentation Files
 2. **`README.md`**
    - Directory structure: `wifi_analyzer/` → `wifi_scout/`
-   - Log path reference: `~/.wifi_scout/` → `~/.network_suite/` (kept for consistency with app)
+   - Command references: `python wa.py` → `python network_suite.py`
+   - File structure updated to show current application files
+   - Test references clarified (legacy vs current)
 
 3. **`GETTING_STARTED.md`**
    - Installation path: `cd wifi_analyzer` → `cd wifi_scout`
@@ -33,6 +35,7 @@ Updated all references from "WiFi Analyzer" to "WiFi Scout" to reflect the perma
 5. **`CLEANUP_COMPLETE.md`**
    - Directory structure: `wifi_analyzer/` → `wifi_scout/`
 
+### Documentation in /docs/ Folder
 6. **`docs/MODULAR_ARCHITECTURE.md`**
    - Directory structure: `wifi_analyzer/` → `wifi_scout/`
 
@@ -41,6 +44,24 @@ Updated all references from "WiFi Analyzer" to "WiFi Scout" to reflect the perma
 
 8. **`docs/CLEANUP_SUMMARY.md`**
    - Directory structure: `wifi_analyzer/` → `wifi_scout/`
+   - Application reference: `wa.py` → `network_suite.py`
+   - Updated developer paths and test references
+
+9. **`docs/QUICKSTART.md`**
+   - Command updated: `python wa.py` → `python network_suite.py`
+
+10. **`docs/QUICK_REFERENCE.md`**
+    - Files changed section updated for current application
+    - Command updated: `python wa.py` → `python network_suite.py`
+
+11. **`docs/SECURITY_REFERENCE.md`**
+    - Code review references updated to current codebase
+
+12. **`docs/SECURITY_AUDIT_REPORT.md`**
+    - Syntax validation updated to reference archived code
+
+13. **`docs/SECURITY_FIXES.md`**
+    - Syntax check commands updated for current structure
 
 ---
 
@@ -80,11 +101,12 @@ The following items intentionally keep their current names for technical reasons
 | Category | Files Changed | Impact |
 |----------|--------------|--------|
 | Configuration | 1 | .gitignore header |
-| Documentation | 7 | All user-facing docs |
+| Core Documentation | 5 | README, guides, structure docs |
+| Docs Folder | 8 | All technical documentation |
 | Code Files | 0 | No code changes needed |
 | Scripts | 0 | Already using correct names |
 
-**Total Files Updated**: 8
+**Total Files Updated**: 14
 
 ---
 
@@ -94,11 +116,16 @@ The following items intentionally keep their current names for technical reasons
 - ✅ "WiFi Scout" in all documentation
 - ✅ Consistent branding across README, guides, and docs
 - ✅ Professional, unified naming
+- ✅ Current application references (`network_suite.py`)
+- ✅ Clear distinction between current and legacy code
+- ✅ All command examples updated to use correct filenames
 
 ### What Developers Will See
 - ✅ Clear directory references updated to `wifi_scout/`
 - ✅ Internal structure references consistent
 - ✅ No broken paths or references
+- ✅ Legacy code properly identified in archive
+- ✅ Current codebase clearly distinguished from legacy
 
 ---
 

@@ -37,7 +37,8 @@
 
 ```bash
 pip install PyQt6 matplotlib
-python wa.py
+python network_suite.py  # Current version
+# python archive/wa.py   # Legacy version (v2.3)
 ```
 
 ## First-Time Setup

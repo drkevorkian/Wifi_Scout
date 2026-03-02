@@ -218,8 +218,8 @@ This document details all security vulnerabilities and bugs that were identified
 
 ### Automated Tests
 ```bash
-# Syntax check
-python -m py_compile wa.py
+# Syntax check (for legacy code)
+python -m py_compile archive/wa.py
 
 # TODO: Add unit tests for:
 # - validate_ssid()

@@ -54,7 +54,7 @@ secure_delete_file(path: str, logger: Logger) -> None
 
 ### Code Review Checklist
 
-When modifying `wa.py`:
+When modifying `network_suite.py` or modules in `core/` or `mods/`:
 
 - [ ] Never log passwords or sensitive data
 - [ ] Always validate user input (SSIDs, passwords)
@@ -248,8 +248,8 @@ You should:
 - Run before deploying changes
 
 ### Code Review
-- Search for `SECURITY` comments in `wa.py`
-- Review functions in "Security" section
+- Search for `SECURITY` comments in codebase
+- Review functions in security-critical modules
 
 ---
 
